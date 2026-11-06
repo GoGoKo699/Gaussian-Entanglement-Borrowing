@@ -8,7 +8,7 @@ This repository establishes a finite resource bound and the complete asymptotic 
 
 Alice and Bob begin with a known pure Gaussian catalyst and local vacuum target modes. They use local Gaussian processing to approximate the product of the **original catalyst and a prescribed pure Gaussian target**. The squared joint fidelity is at least $`1-\varepsilon`$; this single condition includes catalyst return, target preparation and decoupling.
 
-Let $`n`$ count the catalyst's nonzero Gaussian Schmidt pairs, and let $`E`$ count its initial mean photons across both parties. The optimal constructions use exactly $`n`$ physical catalyst modes per party. For a fixed target with nonzero squeezings $`r_1,\ldots,r_k`$, define
+Let $`n`$ count the catalyst's nonzero Gaussian Schmidt pairs, and let $`E`$ count its initial mean photons across both parties. The optimal constructions use exactly $`n`$ physical catalyst modes per party. For a fixed target with $`k\ge1`$ nonzero squeezings $`r_1,\ldots,r_k>0`$, define
 
 ```math
 R=\sum_{j=1}^k r_j,\qquad
@@ -47,6 +47,7 @@ For one target pair of squeezing $`r`$, the individual coefficients are $`r^2`$ 
 | Reader's question | Start here |
 |---|---|
 | What is the scientific argument? | [Scientific overview](science/README.md) |
+| How can I learn the ideas in order? | [Learning route](learning/README.md), [Weedbrook bridge](learning/anchor.md), and [30 milestones](learning/milestones.md) |
 | What is allowed, charged and returned? | [Model and theorem statements](science/model.md) |
 | Why can no allowed Gaussian protocol beat the bound? | [Gaussian geometry](science/gaussian_geometry.md), then [finite-resource converse](science/converse.md) |
 | How are the optimal catalysts built? | [Passive constructions](science/constructions.md) |
@@ -56,6 +57,12 @@ For one target pair of squeezing $`r`$, the individual coefficients are $`r^2`$ 
 | How can the calculations be reproduced? | [Verification guide](verification/README.md) |
 
 The proof first controls entanglement-squeezing displacement by global fidelity. Componentwise Gaussian squeezing monotonicity then bounds every refined measurement branch, including branches contributing to rare success events. A weighted integral inequality gives the resource constraints. Cyclically shifting graded squeezing ladders saturates every asymptotic supporting bound.
+
+## Learning the project
+
+The learning route uses **Weedbrook et al., _Gaussian Quantum Information_ (2012)** as its single educational anchor. The [source bridge](learning/anchor.md) identifies the relevant sections, translates quadrature and covariance conventions, and connects the review to the project's joint-return criterion and resource optimization.
+
+The [30-milestone map](learning/milestones.md) develops the background and then the scientific argument, with dependencies and canonical proof pointers. It connects optical modes, photons, Gaussian measurements and state fidelity to the two resource obstructions, the attaining ladders and the complete tradeoff. The [learning entrypoint](learning/README.md) explains how these routes fit together.
 
 ## Scope
 

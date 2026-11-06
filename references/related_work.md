@@ -38,7 +38,7 @@ Theorem 1 of [Giedke, Eisert, Cirac, and Plenio](https://arxiv.org/pdf/quant-ph/
 Our convention is
 
 ```math
-|r\rangle=\operatorname{sech}r
+|r\rangle=\mathrm{sech}\,r
 \sum_{k=0}^{\infty}(\tanh r)^k|k,k\rangle,
 \qquad V_{\rm vac}=I/2,
 \qquad E(|r\rangle)=2\sinh^2r.

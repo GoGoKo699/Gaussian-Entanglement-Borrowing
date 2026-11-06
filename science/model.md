@@ -7,7 +7,7 @@ Alice and Bob share a pure Gaussian state of optical modes. They use local Gauss
 Use quadratures with $`[q_j,p_\ell]=i\delta_{j\ell}`$ and vacuum covariance $`I/2`$. The standard two-mode squeezed vacuum is
 
 ```math
-|r\rangle=\operatorname{sech}r
+|r\rangle=\mathrm{sech}\,r
 \sum_{m=0}^{\infty}(\tanh r)^m|m,m\rangle,
 \qquad r\ge0.
 ```
@@ -56,7 +56,7 @@ Define
 
 ```math
 q_\varepsilon=
-\frac12\operatorname{arcosh}^2\!\left(\frac1{1-\varepsilon}\right),
+\frac12\mathrm{arcosh}^2\!\left(\frac1{1-\varepsilon}\right),
 \qquad
 T=\sum_{j=1}^{k}\sinh^2r_j,
 \qquad

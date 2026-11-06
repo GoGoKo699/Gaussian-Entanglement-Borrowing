@@ -10,7 +10,7 @@ For a single target squeezing $`r>0`$, the finite converse gives
 q_\varepsilon(n+1)\ge r^2,
 \qquad
 q_\varepsilon=
-\frac12\operatorname{arcosh}^2\!\left(\frac1{1-\varepsilon}\right).
+\frac12\mathrm{arcosh}^2\!\left(\frac1{1-\varepsilon}\right).
 ```
 
 Thus a fixed number of entangled catalyst mode pairs imposes a nonzero error floor, regardless of their brightness. Every oscillator already has infinite Hilbert dimension. The obstruction comes from the ordered Gaussian squeezing spectrum: Gaussian local processing cannot turn a finite list into a slightly shifted list that includes an additional fixed nonzero entry at arbitrarily small global fidelity cost.
@@ -70,7 +70,7 @@ A cyclic permutation at each party produces
 The actual target and catalyst remain a product. The catalyst is slightly depleted, and the target is slightly less squeezed than $`r`$. The joint squared overlap with $`|r\rangle_T\otimes|C\rangle`$ is
 
 ```math
-F=\prod_{i=0}^{n}\operatorname{sech}^2(x_i-x_{i+1}).
+F=\prod_{i=0}^{n}\mathrm{sech}^2(x_i-x_{i+1}).
 ```
 
 For small gaps, infidelity accumulates quadratically in their sizes. This permits a fixed total shift from $`r`$ to zero to be distributed over many modes.
@@ -130,7 +130,7 @@ The triangle inequality therefore gives joint squared fidelity at least $`1-\var
 
 ```math
 E=\frac2{h_d}\sum_{j=1}^{d}\frac{j-1}{j}
-=\frac{2(d-h_d)}{h_d}<\infty.
+=\frac{2(d-h_d)}{h_d}\lt \infty.
 ```
 
 The local operation acts on the finite catalyst-by-target subspace of dimension $`dm`$ and extends by the identity to a unitary on the full oscillator Hilbert space. One catalyst oscillator per party suffices for every accuracy, with rapidly growing photon inventory.

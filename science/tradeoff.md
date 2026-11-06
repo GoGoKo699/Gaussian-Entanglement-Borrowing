@@ -35,11 +35,13 @@ In particular, $`A_0=K`$.
 A finite pair $`(u,v)\in[0,\infty)^2`$ is an **attainable asymptotic budget** if there are an $`\varepsilon_0>0`$ and a finite catalyst and protocol for every $`0<\varepsilon<\varepsilon_0`$ such that
 
 ```math
+\begin{aligned}
 F_\varepsilon\ge1-\varepsilon,
 \qquad
 \limsup_{\varepsilon\downarrow0}\varepsilon n_\varepsilon\le u,
 \qquad
 \limsup_{\varepsilon\downarrow0}\varepsilon E_\varepsilon\le v.
+\end{aligned}
 \tag{2}
 ```
 
@@ -48,9 +50,11 @@ The choices may depend on $`\varepsilon`$. Each catalyst has finitely many modes
 Define the scalar boundary function
 
 ```math
+\begin{aligned}
 V_{\mathbf r}(u)
 =2\sup_{\lambda\ge0}
        \left\{A_\lambda^2-\lambda u\right\}.
+\end{aligned}
 \tag{3}
 ```
 
@@ -61,11 +65,13 @@ The factor two converts the scalarization $`E/2+\lambda n`$ into the full-photon
 **Theorem.** The attainable asymptotic budget region is exactly
 
 ```math
+\begin{aligned}
 \boxed{
 \mathcal B_{\mathbf r}
 =\left\{(u,v)\in[0,\infty)^2:
 u\ge R^2,\quad v\ge V_{\mathbf r}(u)\right\}.
 }
+\end{aligned}
 \tag{4}
 ```
 
@@ -86,31 +92,37 @@ Consequently, the graph of $`V_{\mathbf r}`$ is the entire finite Pareto frontie
 The [finite converse](converse.md) proves that every protocol with $`F\ge1-\varepsilon`$ satisfies, for every $`\lambda\ge0`$,
 
 ```math
+\begin{aligned}
 \left[\frac E2+T+\lambda(n+k)\right]q_\varepsilon
-\ge A_\lambda^2,
-\qquad
+&\ge A_\lambda^2,
+\\
 q_\varepsilon
-=\frac12\operatorname{arcosh}^2\!\left(\frac1{1-\varepsilon}\right),
-\qquad
-\frac{q_\varepsilon}{\varepsilon}\longrightarrow1.
+&=\frac12\mathrm{arcosh}^2\!\left(\frac1{1-\varepsilon}\right),
+\\
+\frac{q_\varepsilon}{\varepsilon}&\longrightarrow1.
+\end{aligned}
 \tag{5}
 ```
 
 Equivalently,
 
 ```math
+\begin{aligned}
 \frac{\varepsilon E}{2}
 +\lambda\varepsilon n
 \ge
 \frac{\varepsilon}{q_\varepsilon}A_\lambda^2
 -\varepsilon(T+\lambda k).
+\end{aligned}
 \tag{6}
 ```
 
 For a family obeying (2), take $`\varepsilon\downarrow0`$ at a fixed $`\lambda`$. Equation (6) implies
 
 ```math
+\begin{aligned}
 \frac v2+\lambda u\ge A_\lambda^2.
+\end{aligned}
 \tag{7}
 ```
 
@@ -122,6 +134,7 @@ $`v\ge V_{\mathbf r}(u)`$. The parameter limit $`\lambda\to\infty`$ is taken aft
 For $`\lambda>0`$, put
 
 ```math
+\begin{aligned}
 D_\lambda
 =\sum_{j=1}^k\int_0^{r_j}
          \frac{dx}{(\sinh^2x+\lambda)^{3/2}},
@@ -129,18 +142,21 @@ D_\lambda
 u_\lambda=A_\lambda B_\lambda,
 \qquad
 v_\lambda=2A_\lambda C_\lambda.
+\end{aligned}
 \tag{8}
 ```
 
 On any compact positive parameter interval, the integrands and all their parameter derivatives are bounded. Differentiation under the integrals therefore gives
 
 ```math
+\begin{aligned}
 A_\lambda'=\frac{B_\lambda}{2},
 \qquad
 B_\lambda'=-\frac{D_\lambda}{2},
 \qquad
 u_\lambda'
 =\frac{B_\lambda^2-A_\lambda D_\lambda}{2}.
+\end{aligned}
 \tag{9}
 ```
 
@@ -158,14 +174,18 @@ B_\lambda^2
 Equality would require $`f^2`$ to be constant almost everywhere. It is strictly increasing on each interval of positive length, so equality is impossible. Hence
 
 ```math
+\begin{aligned}
 u_\lambda'<0.
+\end{aligned}
 \tag{10}
 ```
 
 Since $`v_\lambda=2(A_\lambda^2-\lambda u_\lambda)`$, equations (9)–(10) give
 
 ```math
+\begin{aligned}
 v_\lambda'=-2\lambda u_\lambda'>0.
+\end{aligned}
 \tag{11}
 ```
 
@@ -186,9 +206,11 @@ As $`\lambda\to\infty`$, bounded convergence on the fixed target intervals gives
 Therefore
 
 ```math
+\begin{aligned}
 u_\lambda\longrightarrow R^2,
 \qquad
 v_\lambda\longrightarrow2RH.
+\end{aligned}
 \tag{12}
 ```
 
@@ -210,17 +232,19 @@ $`\sinh x\le L_*x`$ on all target intervals gives
 B_\lambda
 \ge\frac1{L_*}
 \sum_{j=1}^k
-\operatorname{arsinh}\!\left(\frac{L_*r_j}{\sqrt\lambda}\right)
+\mathrm{arsinh}\,\!\left(\frac{L_*r_j}{\sqrt\lambda}\right)
 \longrightarrow\infty.
 ```
 
 Consequently,
 
 ```math
+\begin{aligned}
 u_\lambda\longrightarrow\infty,
 \qquad
 v_\lambda\longrightarrow2K^2
 \quad\text{as }\lambda\downarrow0.
+\end{aligned}
 \tag{13}
 ```
 
@@ -231,27 +255,33 @@ Equations (10), (12), and (13) show that $`\lambda\mapsto u_\lambda`$ is a conti
 For $`u>R^2`$, differentiate the expression inside (3):
 
 ```math
+\begin{aligned}
 \frac{d}{d\lambda}\bigl(A_\lambda^2-\lambda u\bigr)
 =u_\lambda-u.
+\end{aligned}
 \tag{14}
 ```
 
 This derivative is positive before the unique point $`u_\lambda=u`$ and negative after it. That point is the global maximizer. It follows that
 
 ```math
+\begin{aligned}
 V_{\mathbf r}(u)
 =2(A_\lambda^2-\lambda A_\lambda B_\lambda)
 =2A_\lambda C_\lambda
 \quad\text{when }u=A_\lambda B_\lambda.
+\end{aligned}
 \tag{15}
 ```
 
 At $`u=R^2`$, Cauchy–Schwarz gives the upper bound
 
 ```math
+\begin{aligned}
 A_\lambda^2
 \le R\sum_j\int_0^{r_j}(\sinh^2x+\lambda)\,dx
 =\lambda R^2+RH.
+\end{aligned}
 \tag{16}
 ```
 
@@ -271,16 +301,18 @@ $`(A_\lambda+\sqrt\lambda R)/\sqrt\lambda\to2R`$, this proves
 $`A_\lambda^2-\lambda R^2\to RH`$ and hence
 $`V_{\mathbf r}(R^2)=2RH`$.
 
-If $`u<R^2`$, then $`A_\lambda\ge\sqrt\lambda R`$ implies
+If $`u\lt R^2`$, then $`A_\lambda\ge\sqrt\lambda R`$ implies
 $`A_\lambda^2-\lambda u\ge\lambda(R^2-u)`$.
-The supremum in (3) is infinite. This excludes all finite budgets with $`u<R^2`$.
+The supremum in (3) is infinite. This excludes all finite budgets with $`u\lt R^2`$.
 
 The inverse function $`\lambda(u)`$ is smooth because $`u_\lambda'<0`$. Differentiating (15) along the curve gives
 
 ```math
+\begin{aligned}
 V_{\mathbf r}'(u)=-2\lambda(u),
 \qquad
 V_{\mathbf r}''(u)=-\frac{2}{u_\lambda'}>0.
+\end{aligned}
 \tag{17}
 ```
 
@@ -295,9 +327,11 @@ The endpoint limits are
 and
 
 ```math
+\begin{aligned}
 \lim_{u\downarrow R^2}V_{\mathbf r}'(u)=-\infty,
 \qquad
 \lim_{u\to\infty}V_{\mathbf r}'(u)=0.
+\end{aligned}
 \tag{18}
 ```
 
@@ -329,27 +363,31 @@ Every point on the graph is Pareto optimal: moving to a smaller mode coordinate 
 The theorem concerns asymptotic upper budgets. To make its connection to exact finite caps explicit, let $`\mathcal H_{\mathbf r}`$ consist of pairs for which, for every sufficiently small requested $`\varepsilon`$, there is a protocol satisfying
 
 ```math
+\begin{aligned}
 F_\varepsilon\ge1-\varepsilon,
 \qquad
 n_\varepsilon\le\frac u\varepsilon,
 \qquad
 E_\varepsilon\le\frac v\varepsilon.
+\end{aligned}
 \tag{19}
 ```
 
 Then
 
 ```math
+\begin{aligned}
 \mathcal H_{\mathbf r}\subseteq\mathcal B_{\mathbf r},
 \qquad
 \overline{\mathcal H_{\mathbf r}}=\mathcal B_{\mathbf r},
+\end{aligned}
 \tag{20}
 ```
 
 where the closure is in the finite $`(u,v)`$ plane.
 
 For $`u>R^2`$ and $`v>V_{\mathbf r}(u)`$, continuity of the boundary lets one choose
-$`u_0\in(R^2,u)`$ with $`V_{\mathbf r}(u_0)<v`$.
+$`u_0\in(R^2,u)`$ with $`V_{\mathbf r}(u_0)\lt v`$.
 The construction at $`u_0`$ has strict slack in both limiting resources, so it obeys (19) for all sufficiently small $`\varepsilon`$.
 
 At $`u=R^2`$ and $`v>2RH`$, the uniform construction has the exact bound
@@ -375,6 +413,7 @@ Let $`n_{\min}(\varepsilon)`$ be the smallest possible catalyst Schmidt-pair cou
 The individual sharp asymptotic laws are
 
 ```math
+\begin{aligned}
 \boxed{
 \lim_{\varepsilon\downarrow0}
 \varepsilon n_{\min}(\varepsilon)=R^2,
@@ -382,17 +421,20 @@ The individual sharp asymptotic laws are
 \lim_{\varepsilon\downarrow0}
 \varepsilon E_{\rm opt}(\varepsilon)=2K^2.
 }
+\end{aligned}
 \tag{21}
 ```
 
 For the mode law, the finite converse and the uniform construction give
 
 ```math
+\begin{aligned}
 \max\left\{0,\left\lceil\frac{R^2}{q_\varepsilon}-k\right\rceil\right\}
 \le n_{\min}(\varepsilon)
 \le
 \sum_{j=1}^k
 \left\lceil\frac{r_jR}{-\log(1-\varepsilon)}\right\rceil-k.
+\end{aligned}
 \tag{22}
 ```
 
@@ -410,9 +452,11 @@ These lower and upper bounds prove (21).
 The two optima correspond to different families. At the minimum mode coefficient, (7) implies
 
 ```math
+\begin{aligned}
 \varepsilon n_\varepsilon\longrightarrow R^2
 \quad\Longrightarrow\quad
 \liminf_{\varepsilon\downarrow0}\varepsilon E_\varepsilon\ge2RH,
+\end{aligned}
 \tag{23}
 ```
 
@@ -421,12 +465,14 @@ and the uniform construction attains equality. To obtain (23), fix $`\lambda`$, 
 Cauchy–Schwarz on the target intervals gives the strict inequality
 
 ```math
+\begin{aligned}
 K^2=
 \left(\sum_j\int_0^{r_j}\sinh x\,dx\right)^2
 <
 \left(\sum_jr_j\right)
 \left(\sum_j\int_0^{r_j}\sinh^2x\,dx\right)
 =RH.
+\end{aligned}
 \tag{24}
 ```
 
@@ -435,16 +481,18 @@ The integrand $`\sinh x`$ is not almost everywhere constant, which gives strictn
 Conversely,
 
 ```math
+\begin{aligned}
 \varepsilon E_\varepsilon\longrightarrow2K^2
 \quad\Longrightarrow\quad
 \varepsilon n_\varepsilon\longrightarrow\infty.
+\end{aligned}
 \tag{25}
 ```
 
 If (25) failed, some sequence of errors tending to zero would have bounded
 $`\varepsilon n_\varepsilon\le M`$ while $`\varepsilon E_\varepsilon\to2K^2`$.
 Applying (6) along that sequence would imply
-$`2K^2\ge V_{\mathbf r}(M)`$, contrary to the theorem. If $`M<R^2`$, the mode converse already supplies the contradiction.
+$`2K^2\ge V_{\mathbf r}(M)`$, contrary to the theorem. If $`M\lt R^2`$, the mode converse already supplies the contradiction.
 
 The mode minimum in (21) is an exact finite integer optimization whose leading coefficient is known. The frontier endpoint specifies its optimal leading photon coefficient when the mode coefficient tends to that minimum; it does not assert that the uniform ladder attains the smallest integer $`n`$ at every nonzero error.
 
@@ -459,12 +507,14 @@ $`w(\varepsilon)\to\infty`$ as $`\varepsilon\downarrow0`$.
 There is a family with
 
 ```math
+\begin{aligned}
 F_\varepsilon\ge1-\varepsilon,
 \qquad
 \varepsilon n_\varepsilon\le w(\varepsilon)
 \quad\text{for all sufficiently small }\varepsilon,
 \qquad
 \varepsilon E_\varepsilon\longrightarrow2K^2.
+\end{aligned}
 \tag{26}
 ```
 
@@ -497,12 +547,14 @@ This argument uses successively smaller error thresholds for fixed positive para
 For $`k`$ identical target pairs of squeezing $`r`$, all three integrals in (1) are $`k`$ times their single-pair values. Consequently,
 
 ```math
+\begin{aligned}
 \boxed{
 V_{(r,\ldots,r)}(u)
 =k^2 V_{(r)}(u/k^2),
 \qquad
 u\ge k^2r^2.
 }
+\end{aligned}
 \tag{27}
 ```
 
@@ -525,9 +577,11 @@ The factor $`k^2`$ is for a joint infidelity budget on the complete returned cat
 For a single target pair, the mode-optimal endpoint and the photon infimum are therefore
 
 ```math
+\begin{aligned}
 \left(r^2,\;\frac r2\sinh(2r)-r^2\right),
 \qquad
 \inf_{u\ge r^2}V_{(r)}(u)=2(\cosh r-1)^2.
+\end{aligned}
 \tag{29}
 ```
 
