@@ -24,7 +24,7 @@ F=\langle C,R|\rho_{\rm out}|C,R\rangle,
 F\ge1-\varepsilon,\qquad 0<\varepsilon<1.
 ```
 
-This is squared fidelity with a pure reference. It controls return of the original catalyst, preparation of the target and their joint decoupling in one criterion. The purified distance from the desired state is exactly $`\sqrt{1-F}`$. For the pure attaining outputs, this also equals half the trace distance. For a general mixed output, trace distance and infidelity are distinct error parameters.
+This is squared fidelity with a pure reference. It controls return of the original catalyst, preparation of the target and their joint decoupling in one criterion. The purified distance from the desired state is exactly $`\sqrt{1-F}`$. For the pure attaining outputs, this also equals the trace distance to the desired state, defined as one half of the trace norm of the difference of the two density operators. For a general mixed output, trace distance and infidelity are distinct error parameters.
 
 The target list $`\mathbf r`$ is fixed as $`\varepsilon\downarrow0`$. The finite inequalities hold for every finite target list; the asymptotic theorem does not assert uniform estimates for a list growing with $`1/\varepsilon`$.
 
