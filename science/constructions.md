@@ -3,7 +3,7 @@
 The target is fixed throughout. Its nonzero Gaussian Schmidt squeezings are $`\mathbf r=(r_1,\ldots,r_k)`$, with $`k\ge1`$ and $`r_j>0`$, in the standard convention
 
 ```math
-|r\rangle=\operatorname{sech}r\sum_{m=0}^{\infty}(\tanh r)^m|m,m\rangle .
+|r\rangle=\mathrm{sech}\,r\sum_{m=0}^{\infty}(\tanh r)^m|m,m\rangle .
 ```
 
 The resource $`n`$ counts nonzero catalyst Schmidt pairs, and $`E`$ is the initial mean photon number of the catalyst, summed over both parties. The error is the infidelity $`1-F`$, where $`F`$ is the squared overlap with the entire desired product of catalyst and target. The [model](model.md) gives the operational conventions; the [tradeoff theorem](tradeoff.md) identifies the resource boundary.
@@ -50,9 +50,9 @@ For any nonnegative $`a,b`$, summing the geometric Schmidt series gives
 
 ```math
 \langle a|b\rangle
-=\frac{\operatorname{sech}a\,\operatorname{sech}b}
+=\frac{\mathrm{sech}\,a\,\mathrm{sech}\,b}
        {1-\tanh a\tanh b}
-=\operatorname{sech}(a-b).
+=\mathrm{sech}(a-b).
 ```
 
 Consequently, with $`\Delta_{j,i}=x_{j,i}-x_{j,i+1}`$,
@@ -61,7 +61,7 @@ Consequently, with $`\Delta_{j,i}=x_{j,i}-x_{j,i+1}`$,
 \boxed{
 \begin{aligned}
 F&=\prod_{j=1}^k\prod_{i=0}^{n_j}
-       \operatorname{sech}^2\Delta_{j,i},\\
+       \mathrm{sech}^2\,\Delta_{j,i},\\
 E&=2\sum_{j=1}^k\sum_{i=1}^{n_j}\sinh^2x_{j,i}.
 \end{aligned}}
 \tag{1}
@@ -92,11 +92,13 @@ Indeed, integrate the derivative inequality once to obtain
 $`\tanh t\ge t-t^3/3`$, and then integrate again. Summing over the gaps yields
 
 ```math
+\begin{aligned}
 S-\frac{d_{\max}^2S}{6}\le\mathcal L\le S.
+\end{aligned}
 \tag{2}
 ```
 
-Given any requested $`0<\varepsilon<1`$, put
+Given any requested $`0\lt \varepsilon\lt 1`$, put
 
 ```math
 \ell_\varepsilon=-\log(1-\varepsilon).
@@ -105,10 +107,12 @@ Given any requested $`0<\varepsilon<1`$, put
 The exact condition $`S\le\ell_\varepsilon`$ guarantees $`F\ge1-\varepsilon`$. The elementary integral formula for $`\ell_\varepsilon`$ also gives
 
 ```math
+\begin{aligned}
 \varepsilon\le\ell_\varepsilon
 \le\frac{\varepsilon}{1-\varepsilon},
 \qquad
 \frac{\ell_\varepsilon}{\varepsilon}\longrightarrow1.
+\end{aligned}
 \tag{3}
 ```
 
@@ -134,41 +138,48 @@ M_\lambda&=\sqrt{\sinh^2r_*+\lambda}.
 Choose a common step parameter $`h>0`$ for all target pairs. Starting from $`x_{j,0}=r_j`$, iterate
 
 ```math
+\begin{aligned}
 x_{j,i+1}=\max\{0,\;x_{j,i}-h f_\lambda(x_{j,i})\}
+\end{aligned}
 \tag{5}
 ```
 
 until zero is first reached. The positive interior points are the catalyst squeezings. Every full step removes at least $`h\sqrt\lambda`$, so every ladder is finite. All its gaps except the last obey
 $`\Delta_{j,i}=h f_\lambda(x_{j,i})`$; the last obeys
-$`0<\Delta_{j,n_j}\le h f_\lambda(x_{j,n_j})`$.
+$`0\lt \Delta_{j,n_j}\le h f_\lambda(x_{j,n_j})`$.
 
 ### 3.1 Explicit estimates
 
-For $`0<h<2/L_*`$, the construction satisfies
+For $`0\lt h\lt 2/L_*`$, the construction satisfies
 
 ```math
+\begin{aligned}
 \boxed{
 hA_\lambda-\frac{h^2}{4}(T+k\lambda)
 \le S
 \le\frac{hA_\lambda}{1-L_*h/2}.
 }
+\end{aligned}
 \tag{6}
 ```
 
 It also satisfies
 
 ```math
+\begin{aligned}
 \boxed{
 0\le B_\lambda-hn
 \le\frac{L_*}{2\lambda}S
    +\frac{k h M_\lambda}{\sqrt\lambda},
 }
+\end{aligned}
 \tag{7}
 ```
 
 and
 
 ```math
+\begin{aligned}
 \boxed{
 C_\lambda-hT
 \le \frac{hE}{2}
@@ -176,6 +187,7 @@ C_\lambda-hT
 \qquad
 d_{\max}\le hM_\lambda .
 }
+\end{aligned}
 \tag{8}
 ```
 
@@ -236,14 +248,16 @@ The last term lies between zero and $`h\sinh^2r_j`$. This proves the two energy 
 
 ### 3.2 Choice for every requested infidelity
 
-For a requested $`0<\varepsilon<1`$, set
+For a requested $`0\lt \varepsilon\lt 1`$, set
 
 ```math
+\begin{aligned}
 \boxed{
 h_\varepsilon(\lambda)
 =\frac{\ell_\varepsilon}
        {A_\lambda+(L_*/2)\ell_\varepsilon}.
 }
+\end{aligned}
 \tag{9}
 ```
 
@@ -278,7 +292,7 @@ The common step parameter is essential to the joint normalization. Equation (1) 
 
 ### 3.3 Uniformity on finite positive parameter intervals
 
-Let $`0<a\le\lambda\le b<\infty`$ and $`0<h\le1/L_*`$. Equations (6)–(8) imply the following explicit common bounds:
+Let $`0\lt a\le\lambda\le b\lt \infty`$ and $`0\lt h\le1/L_*`$. Equations (6)–(8) imply the following explicit common bounds:
 
 ```math
 \begin{aligned}
@@ -299,29 +313,33 @@ Let $`0<a\le\lambda\le b<\infty`$ and $`0<h\le1/L_*`$. Equations (6)–(8) imply
 For the requested-error choice (9),
 
 ```math
+\begin{aligned}
 \left|\frac{\varepsilon}{h_\varepsilon(\lambda)}
 -A_\lambda\right|
 \le\left(A_b+\frac{L_*}{2}\right)\varepsilon,
 \qquad
 h_\varepsilon(\lambda)
 \le\frac{\varepsilon}{(1-\varepsilon)A_a}.
+\end{aligned}
 \tag{12}
 ```
 
 The functions $`A_\lambda,B_\lambda,C_\lambda`$ are bounded on $`[a,b]`$.
-For $`0<\varepsilon\le\min\{1/2,A_a/(2L_*)\}`$, equation (12) ensures $`h_\varepsilon(\lambda)\le1/L_*`$, so all bounds in (11) apply simultaneously. Equations (11)–(12) therefore prove that both resource limits in (10) are uniform on that interval. No interchange with $`\lambda=0`$ or $`\lambda=\infty`$ is used.
+For $`0\lt \varepsilon\le\min\{1/2,A_a/(2L_*)\}`$, equation (12) ensures $`h_\varepsilon(\lambda)\le1/L_*`$, so all bounds in (11) apply simultaneously. Equations (11)–(12) therefore prove that both resource limits in (10) are uniform on that interval. No interchange with $`\lambda=0`$ or $`\lambda=\infty`$ is used.
 
 ## 4. The minimum-mode endpoint
 
-Uniform ladders attain the endpoint of the tradeoff curve with the smallest normalized mode count. For every $`0<\varepsilon<1`$, put
+Uniform ladders attain the endpoint of the tradeoff curve with the smallest normalized mode count. For every $`0\lt \varepsilon\lt 1`$, put
 
 ```math
+\begin{aligned}
 \delta=\frac{\ell_\varepsilon}{R},
 \qquad
 m_j=\left\lceil\frac{r_j}{\delta}\right\rceil,
 \qquad
 x_{j,i}=r_j\left(1-\frac{i}{m_j}\right),
 \quad 0\le i\le m_j.
+\end{aligned}
 \tag{13}
 ```
 
@@ -329,21 +347,25 @@ The block has $`n_j=m_j-1`$ catalyst pairs and gap size
 $`\delta_j=r_j/m_j\le\delta`$. Thus
 
 ```math
+\begin{aligned}
 S=\sum_j\frac{r_j^2}{m_j}
 \le\delta R=\ell_\varepsilon,
 \qquad
-F=\prod_j\operatorname{sech}^{\,2m_j}(r_j/m_j)
+F=\prod_j\mathrm{sech}^{\,2m_j}(r_j/m_j)
 \ge1-\varepsilon.
+\end{aligned}
 \tag{14}
 ```
 
 The integer rounding obeys
 
 ```math
+\begin{aligned}
 \frac{R^2}{\ell_\varepsilon}-k
 \le n
-<\frac{R^2}{\ell_\varepsilon}
-<\frac{R^2}{\varepsilon}.
+\lt \frac{R^2}{\ell_\varepsilon}
+\lt \frac{R^2}{\varepsilon}.
+\end{aligned}
 \tag{15}
 ```
 
@@ -351,23 +373,27 @@ For $`H_j=\int_0^{r_j}\sinh^2x\,dx`$ and
 $`J=\sum_j H_j/r_j`$, the left and right Riemann sums for the increasing function $`\sinh^2x`$ give
 
 ```math
+\begin{aligned}
 \frac{H}{\delta}-T
 \le\frac E2
 \le\frac{H}{\delta}+J.
+\end{aligned}
 \tag{16}
 ```
 
 To see the upper bound, use
-$`1/\delta_j=m_j/r_j<1/\delta+1/r_j`$; for the lower bound, use
+$`1/\delta_j=m_j/r_j\lt 1/\delta+1/r_j`$; for the lower bound, use
 $`1/\delta_j\ge1/\delta`$.
 Combining (3), (15), and (16) proves
 
 ```math
+\begin{aligned}
 \boxed{
 \varepsilon n_\varepsilon\longrightarrow R^2,
 \qquad
 \varepsilon E_\varepsilon\longrightarrow2RH.
 }
+\end{aligned}
 \tag{17}
 ```
 
@@ -378,10 +404,12 @@ In particular, the minimum normalized mode coefficient is attained, including eq
 A different family attains the smallest photon coefficient. For a common $`h>0`$, let
 
 ```math
-z_j(t)=2\operatorname{artanh}
+\begin{aligned}
+z_j(t)=2\mathrm{artanh}
 \left[\tanh(r_j/2)e^{-t}\right],
 \qquad
 \frac{dz_j}{dt}=-\sinh z_j.
+\end{aligned}
 \tag{18}
 ```
 
@@ -391,22 +419,26 @@ $`x_{j,n_j}\le h`$, and append the final point zero. This gives a finite ladder;
 The exact bounds are
 
 ```math
+\begin{aligned}
 \boxed{
 \frac{h[K-k(\cosh h-1)]}{1+L_*h/2}
 \le S
 \le hK+kh^2,
 }
+\end{aligned}
 \tag{19}
 ```
 
 and
 
 ```math
+\begin{aligned}
 \boxed{
 K-k(\cosh h-1)-hT
 \le\frac{hE}{2}
 \le K.
 }
+\end{aligned}
 \tag{20}
 ```
 
@@ -435,25 +467,29 @@ For (20), the function $`\sinh^2z_j(t)`$ is decreasing. Its right Riemann sum is
 $`h[\sinh^2r_j-\sinh^2x_{j,n_j}]`$.
 Substitute the displayed integral and sum over $`j`$.
 
-For every requested $`0<\varepsilon<1`$, choose the positive solution of
+For every requested $`0\lt \varepsilon\lt 1`$, choose the positive solution of
 $`Kh+kh^2=\ell_\varepsilon`$:
 
 ```math
+\begin{aligned}
 \boxed{
 h_\varepsilon
 =\frac{2\ell_\varepsilon}
        {K+\sqrt{K^2+4k\ell_\varepsilon}}.
 }
+\end{aligned}
 \tag{21}
 ```
 
 Then (19) gives $`F_\varepsilon\ge1-\varepsilon`$. Equation (20) supplies the finite energy bound
 
 ```math
+\begin{aligned}
 E_\varepsilon
 \le
 \frac{K\left(K+\sqrt{K^2+4k\ell_\varepsilon}\right)}
      {\ell_\varepsilon}.
+\end{aligned}
 \tag{22}
 ```
 
@@ -464,13 +500,15 @@ Equation (2) therefore also gives $`(1-F_\varepsilon)/\varepsilon\to1`$.
 In particular,
 
 ```math
+\begin{aligned}
 \boxed{
 \varepsilon E_\varepsilon\longrightarrow2K^2.
 }
+\end{aligned}
 \tag{23}
 ```
 
-The mode count can be read directly from (18). For $`h<\min_jr_j`$, define
+The mode count can be read directly from (18). For $`h\lt \min_jr_j`$, define
 
 ```math
 \tau_j(h)
@@ -480,8 +518,10 @@ The mode count can be read directly from (18). For $`h<\min_jr_j`$, define
 Then $`n_j=\lceil\tau_j(h)/h\rceil`$ and
 
 ```math
+\begin{aligned}
 \sum_j\tau_j(h)\le hn
-<\sum_j\tau_j(h)+kh.
+\lt \sum_j\tau_j(h)+kh.
+\end{aligned}
 \tag{24}
 ```
 
@@ -489,12 +529,14 @@ Because $`\tanh(h/2)/(h/2)\to1`$, the sum in (24), divided by
 $`\log(1/h)`$, tends to $`k`$. Thus this explicit family has
 
 ```math
+\begin{aligned}
 \boxed{
 \frac{\varepsilon n_\varepsilon}{\log(1/\varepsilon)}
 \longrightarrow kK,
 \qquad
 \varepsilon n_\varepsilon\longrightarrow\infty.
 }
+\end{aligned}
 \tag{25}
 ```
 

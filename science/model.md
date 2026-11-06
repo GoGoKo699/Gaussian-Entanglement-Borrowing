@@ -7,7 +7,7 @@ Alice and Bob share a pure Gaussian state of optical modes. They use local Gauss
 Use quadratures with $`[q_j,p_\ell]=i\delta_{j\ell}`$ and vacuum covariance $`I/2`$. The standard two-mode squeezed vacuum is
 
 ```math
-|r\rangle=\operatorname{sech}r
+|r\rangle=\mathrm{sech}\,r
 \sum_{m=0}^{\infty}(\tanh r)^m|m,m\rangle,
 \qquad r\ge0.
 ```
@@ -24,7 +24,7 @@ F=\langle C,R|\rho_{\rm out}|C,R\rangle,
 F\ge1-\varepsilon,\qquad 0<\varepsilon<1.
 ```
 
-This is squared fidelity with a pure reference. It controls return of the original catalyst, preparation of the target and their joint decoupling in one criterion. The purified distance from the desired state is exactly $`\sqrt{1-F}`$. For the pure attaining outputs, this also equals half the trace distance. For a general mixed output, trace distance and infidelity are distinct error parameters.
+This is squared fidelity with a pure reference. It controls return of the original catalyst, preparation of the target and their joint decoupling in one criterion. The purified distance from the desired state is exactly $`\sqrt{1-F}`$. For the pure attaining outputs, this also equals the trace distance to the desired state, defined as one half of the trace norm of the difference of the two density operators. For a general mixed output, trace distance and infidelity are distinct error parameters.
 
 The target list $`\mathbf r`$ is fixed as $`\varepsilon\downarrow0`$. The finite inequalities hold for every finite target list; the asymptotic theorem does not assert uniform estimates for a list growing with $`1/\varepsilon`$.
 
@@ -56,7 +56,7 @@ Define
 
 ```math
 q_\varepsilon=
-\frac12\operatorname{arcosh}^2\!\left(\frac1{1-\varepsilon}\right),
+\frac12\mathrm{arcosh}^2\!\left(\frac1{1-\varepsilon}\right),
 \qquad
 T=\sum_{j=1}^{k}\sinh^2r_j,
 \qquad

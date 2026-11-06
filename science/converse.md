@@ -4,23 +4,27 @@ This chapter proves a resource bound for preparing a fixed pure bipartite Gaussi
 
 With the conventions in [the model](model.md), every such protocol with squared joint fidelity at least $`1-\varepsilon`$ satisfies
 ```math
+\begin{aligned}
 \boxed{
 q_\varepsilon
 \left[\frac E2+T+\lambda(n+k)\right]
 \ge A_\lambda^2
 \qquad\text{for every }\lambda\ge0,
 }
+\end{aligned}
 \tag{C1}
 ```
 where
 ```math
+\begin{aligned}
 q_\varepsilon
-=\frac12\operatorname{arcosh}^2\!\left(\frac1{1-\varepsilon}\right),
-\qquad
-T=\sum_{j=1}^k\sinh^2r_j,
-\qquad
+&=\frac12\mathrm{arcosh}^2\!\left(\frac1{1-\varepsilon}\right),
+\\
+T&=\sum_{j=1}^k\sinh^2r_j,
+\\
 A_\lambda
-=\sum_{j=1}^k\int_0^{r_j}\sqrt{\sinh^2x+\lambda}\,dx.
+&=\sum_{j=1}^k\int_0^{r_j}\sqrt{\sinh^2x+\lambda}\,dx.
+\end{aligned}
 \tag{C2}
 ```
 The proof does not assume that a protocol is a passive permutation or that its retained output is pure.
@@ -37,7 +41,7 @@ with each $`r_j>0`$. Its canonical state is
 ```math
 |R\rangle=\bigotimes_{j=1}^k|r_j\rangle,
 \qquad
-|r\rangle=\operatorname{sech}r
+|r\rangle=\mathrm{sech}\,r
 \sum_{\ell=0}^\infty(\tanh r)^\ell|\ell,\ell\rangle.
 ```
 Arbitrary fixed local Gaussian dressing of the target is also allowed: the converse uses its entanglement vector, and a local change of target frame does not change the charged initial catalyst inventory.
@@ -48,7 +52,9 @@ Target modes start in local vacuum. The desired final reference is the entire pu
 ```
 For a normalized retained output $`\rho`$, including a success-conditioned output, write
 ```math
+\begin{aligned}
 F=\langle\Xi|\rho|\Xi\rangle.
+\end{aligned}
 \tag{C3}
 ```
 This is squared fidelity, and it requires joint return and decoupling of the catalyst and target. It is not merely a condition on either marginal.
@@ -60,37 +66,47 @@ E=\sum_{\text{initial catalyst modes at both parties}}
 ```
 The [photon minimum theorem](gaussian_geometry.md) gives
 ```math
+\begin{aligned}
 \frac E2\ge\sum_{i=1}^n\sinh^2a_i.
+\end{aligned}
 \tag{C4}
 ```
 It includes arbitrary initial displacement, local squeezing, and local mode mixing.
 
 Define two vectors of length $`n+k`$:
 ```math
-\mathbf s=\operatorname{sort}_{\downarrow}
+\begin{aligned}
+\mathbf s&=\mathrm{sort}_{\downarrow}
 (a_1,\ldots,a_n,\underbrace{0,\ldots,0}_{k}),
-\qquad
-\mathbf t=\operatorname{sort}_{\downarrow}
+\\
+\mathbf t&=\mathrm{sort}_{\downarrow}
 (a_1,\ldots,a_n,r_1,\ldots,r_k).
+\end{aligned}
 \tag{C5}
 ```
 The input and desired output Gaussian Schmidt vectors are respectively $`\mathbf s`$ and $`\mathbf t`$, apart from common trailing zeros. Since (C5) replaces zeros by nonnegative entries,
 ```math
+\begin{aligned}
 t_i\ge s_i
 \qquad\text{for all }i.
+\end{aligned}
 \tag{C6}
 ```
 For example, (C6) follows by comparing the number of entries above each threshold in the two lists.
 
 The squared insertion displacement is
 ```math
+\begin{aligned}
 D(\mathbf a;\mathbf r)
 =\sum_{i=1}^{n+k}(t_i-s_i)^2.
+\end{aligned}
 \tag{C7}
 ```
 This number is unchanged by adding common trailing zeros. It is strictly positive for a nonzero target and a finite catalyst, since
 ```math
+\begin{aligned}
 \sum_i(t_i-s_i)=\sum_{j=1}^k r_j>0.
+\end{aligned}
 \tag{C8}
 ```
 
@@ -117,7 +133,7 @@ Use the local Gaussian dilation of every instrument. Keep any local environment 
 
 A Gaussian POVM with a mixed seed can likewise be refined into rank-one Gaussian seeds. To see this explicitly, if the seed covariance is
 ```math
-W=S\operatorname{diag}(\boldsymbol\nu,\boldsymbol\nu)S^T,
+W=S\mathrm{diag}(\boldsymbol\nu,\boldsymbol\nu)S^T,
 \qquad \nu_i\ge\frac12,
 ```
 then the pure covariance $`W_0=SS^T/2`$ obeys $`W_0\le W`$. A centered Gaussian seed with covariance $`W`$ is the Gaussian mixture of displacements of the pure seed with covariance $`W_0`$, with classical displacement covariance $`W-W_0`$. Recording this additional variable gives the rank-one refinement. For a measurement performed inside a dilation, all modes not belonging to its retained output are read out in the same way.
@@ -138,8 +154,10 @@ The componentwise ordering criterion for pure Gaussian LOCC is established by [G
 
 Along almost every complete fine record of a finite protocol, the nonnegative Gaussian Schmidt squeezing vector never increases componentwise when it is sorted in descending order and padded by zeros. If the retained pure output vector is $`\mathbf b`$, then
 ```math
+\begin{aligned}
 b_i\le s_i
 \quad\text{for every }i,
+\end{aligned}
 \tag{C9}
 ```
 where additional physical output slots are included as common trailing zeros.
@@ -148,14 +166,18 @@ where additional physical output slots are included as common trailing zeros.
 
 Consider a rank-one Gaussian measurement at Alice after any chosen local dilation and Gaussian unitary. Fix the preceding fine history, so all covariance matrices and measurement settings are fixed. Let $`M`$ be the covariance of the modes being measured, $`B`$ Bob's covariance, and $`C`$ their cross covariance. A measurement with Gaussian seed covariance $`W`$ gives
 ```math
+\begin{aligned}
 B_y=B-C^T(M+W)^{-1}C\le B.
+\end{aligned}
 \tag{C10}
 ```
 The result is independent of the current outcome $`y`$ except for first moments. Formula (C10) is the conditional Gaussian Schur complement, obtained by multiplying the joint Gaussian Wigner density by the Gaussian measurement effect and completing the square; see also [Adesso, Ragy and Lee, Sec. 3.4, Eq. (97)](https://arxiv.org/pdf/1401.4679).
 
 For a measurement of commuting quadratures, let $`M_q`$ be the covariance of just those quadratures and $`C_q`$ their cross covariance with Bob. Ordinary Gaussian conditioning gives
 ```math
+\begin{aligned}
 B_y=B-C_q^T M_q^{-1}C_q\le B.
+\end{aligned}
 \tag{C11}
 ```
 The premeasurement state has finite positive covariance, so the measured principal covariance $`M_q`$ is positive definite. This proves the needed inequality directly for the homodyne instrument as well.
@@ -176,14 +198,18 @@ The zero padding is substantive. An arbitrary number of free local Gaussian anci
 
 For every finite protocol in the stated class, every positive-probability success event, and every retained output in their trace-norm closure for the fixed input and target,
 ```math
+\begin{aligned}
 \boxed{
-F\le\operatorname{sech}\!\left(\sqrt{2D(\mathbf a;\mathbf r)}\right).
+F\le\mathrm{sech}\,\!\left(\sqrt{2D(\mathbf a;\mathbf r)}\right).
 }
+\end{aligned}
 \tag{C12}
 ```
 Consequently, if $`F\ge1-\varepsilon`$, then
 ```math
+\begin{aligned}
 D(\mathbf a;\mathbf r)\le q_\varepsilon.
+\end{aligned}
 \tag{C13}
 ```
 
@@ -193,17 +219,21 @@ t_i-b_{\omega,i}\ge t_i-s_i\ge0.
 ```
 All entries beyond those in (C5) are common zeros. Therefore
 ```math
+\begin{aligned}
 \|\mathbf t-\mathbf b_\omega\|_2^2
 \ge\|\mathbf t-\mathbf s\|_2^2
 =D(\mathbf a;\mathbf r).
+\end{aligned}
 \tag{C14}
 ```
 The [pure Gaussian fidelity bound](gaussian_geometry.md) gives
 ```math
+\begin{aligned}
 |\langle\Xi|\psi_\omega\rangle|^2
-\le\operatorname{sech}
+\le\mathrm{sech}
 \!\left(\sqrt2\,\|\mathbf t-\mathbf b_\omega\|_2\right)
-\le\operatorname{sech}\!\left(\sqrt{2D(\mathbf a;\mathbf r)}\right).
+\le\mathrm{sech}\,\!\left(\sqrt{2D(\mathbf a;\mathbf r)}\right).
+\end{aligned}
 \tag{C15}
 ```
 Both $`|C\rangle`$ and the fine branch may have arbitrary local Gaussian dressing and displacement: these were already included in the geometric bound.
@@ -245,10 +275,12 @@ Because $`D>0`$ for every finite catalyst and nonzero target, (C12) also exclude
 
 Under the assumptions above, for every $`\lambda\ge0`$,
 ```math
+\begin{aligned}
 A_\lambda^2
 \le
 D(\mathbf a;\mathbf r)
 \left[\frac E2+T+\lambda(n+k)\right].
+\end{aligned}
 \tag{C16}
 ```
 Combining with (C13) proves (C1).
@@ -319,7 +351,9 @@ R^2
 ```
 Hence any output with squared joint fidelity at least $`1-\varepsilon`$ obeys
 ```math
+\begin{aligned}
 n\ge\frac{R^2}{q_\varepsilon}-k.
+\end{aligned}
 \tag{C20}
 ```
 The same bound applies to the physical catalyst mode count at either party, since it is no smaller than $`n`$. Equivalently, (C20) is the $`\lambda\to\infty`$ projection of (C1), using
@@ -327,7 +361,9 @@ $`A_\lambda/\sqrt\lambda\to R`$.
 
 At $`\lambda=0`$, (C1) gives
 ```math
+\begin{aligned}
 E\ge\frac{2K^2}{q_\varepsilon}-2T.
+\end{aligned}
 \tag{C21}
 ```
 When either displayed lower bound is negative, the nonnegativity of the resource gives the stronger statement.
@@ -336,11 +372,13 @@ For a fixed target list and $`\varepsilon\downarrow0`$, the geometric formula gi
 $`q_\varepsilon=\varepsilon+O(\varepsilon^2)`$.
 Thus every feasible resource family satisfies
 ```math
+\begin{aligned}
 \liminf_{\varepsilon\downarrow0}\varepsilon n
 \ge R^2,
 \qquad
 \liminf_{\varepsilon\downarrow0}\varepsilon E
 \ge2K^2.
+\end{aligned}
 \tag{C22}
 ```
 For one target pair these coefficients are $`r^2`$ and $`2(\cosh r-1)^2`$. For several target pairs, the coefficients involve the squares of the **sums**, as shown in (C22).
@@ -349,8 +387,10 @@ More generally, any finite achievable normalized budgets $`(u,v)`$ with
 $`\limsup\varepsilon n\le u`$ and $`\limsup\varepsilon E\le v`$
 must satisfy
 ```math
+\begin{aligned}
 \frac v2+\lambda u\ge A_\lambda^2
 \qquad\text{for every fixed }\lambda\ge0.
+\end{aligned}
 \tag{C23}
 ```
 These are necessary bounds. The [construction chapter](constructions.md) and [tradeoff theorem](tradeoff.md) establish the matching small-error statements. Neither (C12) nor (C1) is asserted to be the exact optimum at finite resources.
