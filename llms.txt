@@ -1,0 +1,29 @@
+# Gaussian Entanglement Borrowing
+
+This project determines the mode and initial-photon costs of approximately borrowing a fixed pure Gaussian target from a known pure Gaussian catalyst under physical Gaussian LOCC. The return contract is squared joint fidelity with the original catalyst tensor the target.
+
+## Routes
+
+- Scientific story: README.md, science/README.md, science/interpretation.md.
+- Assumptions and exact claims: science/model.md.
+- Fidelity and symplectic geometry: science/gaussian_geometry.md.
+- All-protocol finite converse, branch refinement and postselection: science/converse.md.
+- Explicit catalysts for every requested error: science/constructions.md.
+- Full asymptotic budget region and both resource endpoints: science/tradeoff.md.
+- Attribution and literature scope: references/related_work.md and references/references.bib.
+- Reproduction, numerical scope and stored results: verification/README.md.
+
+## Essential distinctions
+
+n counts nonzero Gaussian Schmidt pairs; constructions use n physical catalyst modes per party. E counts initial photons across both parties, including local dressing. Control work and preparation complexity are separate resources.
+
+The asymptotic budget coordinates are u = limsup epsilon*n and v = limsup epsilon*E. The full-photon frontier is V(u) = 2 sup_lambda (A_lambda^2 - lambda*u). The factor two is part of the convention.
+
+The minimum mode coefficient is R^2. The photon infimum is 2K^2 and requires epsilon*n to diverge. At the minimum-mode endpoint the optimal photon coefficient is 2RH. These costs are not simultaneously attained by one finite normalized budget pair.
+
+The catalyst is pure Gaussian. The target list stays fixed as epsilon tends to zero. Postselection and classical mixtures are covered through a uniform fine-branch bound. Formal unbounded filters are not included without a physical instrument implementation.
+
+The finite inequality is a converse, not a claim of exact finite-error optimality. The frontier theorem uses upper asymptotic budgets and gives separate statements for strict finite caps. Public non-Gaussian comparisons relax both the catalyst and control assumptions.
+
+Use the topic files as authoritative proofs. Numerical records verify finite formulas and implementations; they do not substitute for proofs. No personal learner state or private research decisions belong in this repository.
+

@@ -1,0 +1,29 @@
+{
+  "scope": "Prescribed-error finite bounds for three passive ladder constructions, integer rounding, and finite contact supports.",
+  "all_checks_passed": true,
+  "seed": 20261106,
+  "random_target_error_cases": 72,
+  "explicit_target_error_cases": 4,
+  "requested_infidelity_0_99_cases": 2,
+  "counts": {
+    "graded": 76,
+    "uniform": 76,
+    "photon": 76,
+    "support_contacts": 108
+  },
+  "zero_catalyst_cases": {
+    "graded": 4,
+    "uniform": 4,
+    "photon": 4
+  },
+  "largest_actual_to_requested_error_ratio_graded": 0.9997603019105527,
+  "inequality_tolerance": {
+    "relative_coefficient": 2e-09,
+    "scale": "max(1, abs(left), abs(right))"
+  },
+  "versions": {
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "scipy": "1.17.0"
+  }
+}
